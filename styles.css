@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+
+/* Hide scrollbar */
+html {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+body::-webkit-scrollbar {
+    width: 0; /* For WebKit (Chrome, Safari) */
+    height: 0; /* For WebKit (Chrome, Safari) */
+}
+
+/* General styles */
+body {
+    font-family: 'DM Mono', monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: #f7f9fb;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header styles */
+header {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: black;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: black;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    border-bottom: 1px solid #555;
+    padding-bottom: 0.3rem;
+    color: black;
+}
+
+ul,
+ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer styles */
+footer {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #555;
+}
+
+footer p {
+    margin: 0;
+    color: black;
+}
+
+/* Link styles */
+a {
+    color: #5671f8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* New rule to override the previous one for header links */
+a.header-link:hover {
+    text-decoration: none;
+}
+
+.highlight {
+    background-color: #0098ea;
+    color: white;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+/* Mobile specific changes */
+@media screen and (max-width: 600px) {
+    /* Container styles */
+    .container {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    /* Header styles */
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header p {
+        font-size: 0.8rem;
+    }
+
+    /* Main content styles */
+    main {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+}
