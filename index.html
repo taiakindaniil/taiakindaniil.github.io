@@ -49,7 +49,6 @@
                 <a href="#mini-apps" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Telegram Mini Apps</a>
                 <a href="#projects" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Other Projects</a>
                 <a href="#opensource" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Open Source</a>
-                <a href="#channel" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Channel</a>
             </nav>
             <button
                 id="menu-close"
@@ -114,6 +113,23 @@
                         Full-stack Mini Apps inside Telegram: React frontend, Telegram WebApp API, and backend microservices.
                     </p>
                     <div class="mt-8 space-y-6">
+                        <article class="rounded-xl border border-neutral-200 bg-neutral-50/50 overflow-hidden">
+                            <img src="media/gifts-constructor-mini-app.webp" alt="Gifts Constructor Mini App preview" class="w-full object-cover" />
+                            <div class="p-6">
+                            <h3 class="text-lg font-semibold text-neutral-900">Gifts Constructor</h3>
+                            <p class="mt-2 text-neutral-600 text-sm leading-relaxed">
+                                Mini App for building and sharing gift profiles in Telegram style. Full-stack: frontend and backend. Users assemble gifts in a constructor from existing or custom items, customize a Telegram-style profile, and share it. Drag-and-drop, pinning, profile sharing. Multilingual, subscription with Telegram Stars, admin panel.
+                            </p>
+                            <ul class="mt-3 list-inside list-disc space-y-1 text-sm text-neutral-600">
+                                <li>Gift constructor: existing and custom items, Telegram-style profile</li>
+                                <li>Drag-and-drop, pinning, profile sharing</li>
+                                <li>Multilingual support</li>
+                                <li>Subscription and payments via Telegram Stars</li>
+                                <li>Admin panel for management</li>
+                            </ul>
+                            <p class="mt-3 text-xs text-neutral-500"><strong>Stack:</strong> React, Zustand, TanStack, aiogram, FastAPI, PostgreSQL</p>
+                            </div>
+                        </article>
                         <article class="rounded-xl border border-neutral-200 bg-neutral-50/50 overflow-hidden">
                             <img src="media/solana-trading-bot.webp" alt="Solana Trading Bot preview" class="w-full object-cover" />
                             <div class="p-6">
@@ -224,22 +240,6 @@
                             <p class="mt-1 text-sm text-neutral-600">Low-level extensions for FunC / TOLK smart contracts.</p>
                         </li>
                     </ul>
-                </section>
-
-                <section id="channel" class="scroll-mt-24">
-                    <h2 class="text-sm font-semibold uppercase tracking-wider text-neutral-400">From my channel</h2>
-                    <p class="mt-4 text-neutral-600">Latest posts from <a href="https://t.me/dnevnik_ton" class="text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">@dnevnik_ton</a>.</p>
-                    <div class="mt-6 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50/50">
-                        <iframe
-                            src="https://t.me/s/dnevnik_ton?embed=1"
-                            class="h-[480px] w-full border-0"
-                            title="Telegram channel @dnevnik_ton"
-                            loading="lazy"
-                        ></iframe>
-                        <div class="border-t border-neutral-200 bg-white px-4 py-3 text-center">
-                            <a href="https://t.me/dnevnik_ton" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-600 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Open channel in Telegram →</a>
-                        </div>
-                    </div>
                 </section>
             </main>
 
