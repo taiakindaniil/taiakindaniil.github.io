@@ -1,145 +1,310 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daniel Taiakin</title>
+    <title>Daniel Taiakin | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-    <div class="page-content">
-        <div class="container">
-            <header>
-                <h1>Daniel Taiakin | Software Engineer</h1>
-                <p>
-                    Russia, GMT+3 |
-                    <a href="https://t.me/taiakin">Telegram</a> |
-                    <a href="https://github.com/taiakindaniil">Github</a>
+<body class="antialiased text-neutral-800 bg-white font-sans">
+    <!-- Top-right menu button -->
+    <div class="fixed top-0 right-0 z-50 p-4">
+        <button
+            id="menu-toggle"
+            type="button"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-200 bg-white/90 text-neutral-600 shadow-sm transition hover:border-neutral-300 hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="nav-overlay"
+        >
+            <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+    </div>
+
+    <!-- Overlay navigation -->
+    <div
+        id="nav-overlay"
+        class="nav-overlay fixed inset-0 z-40 flex bg-white/95 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-out"
+        aria-hidden="true"
+    >
+        <div class="nav-overlay__content flex h-full w-full flex-col items-center justify-center gap-1 p-8 opacity-0 transition-all duration-300 ease-out">
+            <nav class="flex flex-col items-center gap-1" aria-label="Sections">
+                <a href="#about" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">About</a>
+                <a href="#skills" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Skills &amp; Interests</a>
+                <a href="#mini-apps" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Telegram Mini Apps</a>
+                <a href="#projects" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Other Projects</a>
+                <a href="#opensource" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Open Source</a>
+                <a href="#channel" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Channel</a>
+            </nav>
+            <button
+                id="menu-close"
+                type="button"
+                class="mt-8 flex h-10 w-10 items-center justify-center rounded-full border border-neutral-200 text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-700"
+                aria-label="Close menu"
+            >
+                <i data-lucide="x" class="h-5 w-5"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <a
+        href="https://t.me/taiakin"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-30 flex items-center gap-2 rounded-full bg-neutral-900 px-5 py-3 text-sm font-medium text-white shadow-lg transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2"
+        aria-label="Contact for development"
+    >
+        <i data-lucide="message-circle" class="h-4 w-4 shrink-0"></i>
+        <span>Discuss your project</span>
+    </a>
+
+    <div class="min-h-screen">
+        <div class="mx-auto max-w-2xl px-6 py-16 sm:px-8">
+            <header class="text-center">
+                <h1 class="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">Daniel Taiakin</h1>
+                <p class="mt-2 text-lg text-neutral-600">Software Engineer</p>
+                <p class="mt-3 text-sm text-neutral-500">
+                    Russia, GMT+3 ·
+                    <a href="https://t.me/taiakin" class="text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Telegram</a>
+                    ·
+                    <a href="https://github.com/taiakindaniil" class="text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">GitHub</a>
+                    ·
+                    <a href="https://x.com/taiakindaniel" target="_blank" rel="noopener noreferrer" class="text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">X</a>
                 </p>
             </header>
-            <main>
-                <section>
-                    <p>
-                        Hello! My name is Daniel. I am a developer with a
-                        strong passion for open-source development and
-                        blockchain technology.
+
+            <main class="mt-16 space-y-20">
+                <section id="about" class="scroll-mt-24">
+                    <h2 class="text-sm font-semibold uppercase tracking-wider text-neutral-400">About</h2>
+                    <p class="mt-4 text-neutral-600 leading-relaxed">
+                        Hello! My name is Daniel. I am a developer with a strong passion for open-source development and
+                        blockchain technology. I build Telegram Mini Apps, bots, and smart contracts.
                     </p>
                 </section>
-                <section>
-                    <a class="header-link" href="#skills">
-                        <h2 id="skills">Skills & Interests</h2>
-                    </a>
-                    <ul>
-                        <li>
-                            Programming Languages:<br />
-                            Proficient in Python, TypeScript, FunC, Tact, Swift<br />
-                            Familiarity with C++, Solidity
+
+                <section id="skills" class="scroll-mt-24">
+                    <h2 class="text-sm font-semibold uppercase tracking-wider text-neutral-400">Skills &amp; Interests</h2>
+                    <ul class="mt-4 space-y-3 text-neutral-600">
+                        <li><strong class="text-neutral-800">Programming:</strong> Python, TypeScript, FunC, TOLK, Swift; familiarity with C++, Solidity</li>
+                        <li><strong class="text-neutral-800">Tech:</strong> Linux, SQL, Git, Docker</li>
+                        <li><strong class="text-neutral-800">Spoken:</strong> English (C1), Russian (Native)</li>
+                        <li><strong class="text-neutral-800">Interests:</strong> Blockchain, Distributed Systems, Artificial Intelligence, Telegram Mini Apps</li>
+                    </ul>
+                </section>
+
+                <section id="mini-apps" class="scroll-mt-24">
+                    <h2 class="text-sm font-semibold uppercase tracking-wider text-neutral-400">Telegram Mini Apps</h2>
+                    <p class="mt-4 text-neutral-600">
+                        Full-stack Mini Apps inside Telegram: React frontend, Telegram WebApp API, and backend microservices.
+                    </p>
+                    <div class="mt-8 space-y-6">
+                        <article class="rounded-xl border border-neutral-200 bg-neutral-50/50 overflow-hidden">
+                            <img src="media/solana-trading-bot.webp" alt="Solana Trading Bot preview" class="w-full object-cover" />
+                            <div class="p-6">
+                            <h3 class="text-lg font-semibold text-neutral-900"><a href="https://t.me/tg_dex_trade_bot" class="hover:underline">Solana Trading Bot</a></h3>
+                            <p class="mt-2 text-neutral-600 text-sm leading-relaxed">
+                                Trading Mini App with automated Solana wallets, token marketplace, and position tracking. Real-time data via WebSocket/GRPC.
+                            </p>
+                            <ul class="mt-3 list-inside list-disc space-y-1 text-sm text-neutral-600">
+                                <li>Automated wallet system: generation, encryption, deposits/withdrawals, history</li>
+                                <li>Token marketplace with Raydium integration and real-time metrics</li>
+                                <li>Trading UI: analytics, TradingView charts, one-click buy/sell</li>
+                                <li>Position tracking with PnL for open/closed trades</li>
+                                <li>Microservices: token monitoring, Solana data aggregation</li>
+                            </ul>
+                            <p class="mt-3 text-xs text-neutral-500"><strong>Stack:</strong> React, Python (FastAPI), aiogram, WebSocket/GRPC, Solana</p>
+                            <a href="https://github.com/taiakindaniil/sol-trading-bot-readme" class="mt-3 inline-block text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">More details →</a>
+                            </div>
+                        </article>
+                        <article class="rounded-xl border border-neutral-200 bg-neutral-50/50 p-6">
+                            <h3 class="text-lg font-semibold text-neutral-900"><a href="https://t.me/CashTonBot" class="hover:underline">CashTON</a></h3>
+                            <p class="mt-2 text-neutral-600 text-sm leading-relaxed">Telegram bot with subscription system for channels, payments, and admin panel.</p>
+                            <ul class="mt-3 list-inside list-disc space-y-1 text-sm text-neutral-600">
+                                <li>Subscription system for Telegram channels</li>
+                                <li>Scalable DB for users, coupons, transactions</li>
+                                <li>Scheduler for automated tasks and notifications</li>
+                                <li>Admin interface and secure payment processing</li>
+                            </ul>
+                            <p class="mt-3 text-xs text-neutral-500"><strong>Stack:</strong> Telegram Bot API, backend, DB</p>
+                        </article>
+                        <article class="rounded-xl border border-neutral-200 bg-neutral-50/50 p-6">
+                            <h3 class="text-lg font-semibold text-neutral-900">DarkTonPad</h3>
+                            <p class="mt-2 text-neutral-600 text-sm leading-relaxed">Launchpad for startups with community-driven investments. Telegram Web App with TonConnect and USDT payments.</p>
+                            <ul class="mt-3 list-inside list-disc space-y-1 text-sm text-neutral-600">
+                                <li>TonConnect integrated into the Telegram Web App</li>
+                                <li>Microservice for USDT payments for startups</li>
+                                <li>Smart contract for mass airdrop distribution (multi-million audience)</li>
+                            </ul>
+                            <p class="mt-3 text-xs text-neutral-500"><strong>Stack:</strong> Telegram Web App, TonConnect, TON, USDT</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="projects" class="scroll-mt-24">
+                    <h2 class="text-sm font-semibold uppercase tracking-wider text-neutral-400">Other Projects</h2>
+                    <p class="mt-4 text-neutral-600">Blockchain, smart contracts, bots, and one-off integrations.</p>
+
+                    <article class="mt-8 rounded-xl border border-neutral-200 bg-neutral-50/50 p-6">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <h3 class="text-lg font-semibold text-neutral-900"><a href="https://t.me/jettradebot" class="hover:underline">JetTrade</a></h3>
+                            <span class="rounded-full bg-neutral-200 px-2.5 py-0.5 text-xs font-medium text-neutral-700">Own project</span>
+                        </div>
+                        <p class="mt-2 text-neutral-600 text-sm leading-relaxed">
+                            Trading bot on TON with fast access to swaps and continuous feature updates. Built for reliability and stability. Collaboration with STON.fi. Referral program: up to 50% of commission from every trade made by users who join via referral link.
+                        </p>
+                        <ul class="mt-3 list-inside list-disc space-y-1 text-sm text-neutral-600">
+                            <li>Reliable and stable bot with fast access to trading</li>
+                            <li>Continuous feature updates and integrations</li>
+                            <li>Referral program with up to 50% commission share</li>
+                            <li>Documentation, community chat, and alerts channel</li>
+                        </ul>
+                        <p class="mt-3 text-xs text-neutral-500"><strong>Stack:</strong> aiogram, PostgreSQL, TON</p>
+                        <div class="mt-3 flex flex-wrap gap-3">
+                            <a href="https://t.me/jettradebot" class="text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Bot</a>
+                            <a href="https://jettrade.gitbook.io/docs" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Docs</a>
+                            <a href="https://t.me/jettrade_chat" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Community</a>
+                            <a href="https://t.me/jet_detector" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Alerts</a>
+                        </div>
+                    </article>
+
+                    <ul class="mt-8 space-y-6 border-t border-neutral-200 pt-6">
+                        <li class="border-b border-neutral-100 pb-6 last:border-0">
+                            <h3 class="font-semibold text-neutral-900"><a href="https://github.com/taiakindaniil/jetpump-contracts" class="hover:underline">Launchpad Smart Contract (JetPump)</a></h3>
+                            <p class="mt-1 text-sm text-neutral-600">Token launchpad smart contract with advanced mathematical algorithms and bonding curve–based price formation.</p>
                         </li>
-                        <li>Tech skills: Linux, SQL, Git, Docker</li>
-                        <li>Languages: English (C1), Russian (Native)</li>
-                        <li>
-                            Interests: Blockchain, Distributed Systems, Artificial Intelligence
+                        <li class="border-b border-neutral-100 pb-6 last:border-0">
+                            <h3 class="font-semibold text-neutral-900"><a href="https://t.me/CropAndRob_bot" class="hover:underline">HappyFarmer x LitEnergy</a></h3>
+                            <p class="mt-1 text-sm text-neutral-600">NFT collection with lootbox mechanics: users burn NFTs for a randomized chance to receive a new NFT.</p>
+                        </li>
+                        <li class="border-b border-neutral-100 pb-6 last:border-0">
+                            <h3 class="font-semibold text-neutral-900"><a href="https://crypton.tools" class="hover:underline">CRYPTON</a></h3>
+                            <p class="mt-1 text-sm text-neutral-600">Utilities for TON: scalable <a href="https://staking.crypton.tools" class="underline hover:no-underline">staking contract</a> for $CRYPTON, early unstaking with penalties, limit of n stakes per user.</p>
+                        </li>
+                        <li class="border-b border-neutral-100 pb-6 last:border-0">
+                            <h3 class="font-semibold text-neutral-900">Diamore</h3>
+                            <p class="mt-1 text-sm text-neutral-600">Tokenized diamonds marketplace: NFT collection launch, refund system for TON distribution, NFT staking smart contract.</p>
+                        </li>
+                        <li class="border-b border-neutral-100 pb-6 last:border-0">
+                            <h3 class="font-semibold text-neutral-900">Underhood.io</h3>
+                            <p class="mt-1 text-sm text-neutral-600">NFT project: jetton contract linked to NFT; collection contract with token farming, NFT upgrades, burning for full returns.</p>
+                        </li>
+                        <li class="border-b border-neutral-100 pb-6 last:border-0">
+                            <h3 class="font-semibold text-neutral-900">Private client</h3>
+                            <p class="mt-1 text-sm text-neutral-600">DEX trading node on Sui (3–4 hours); GasPump, Stonfi v2, Blum Memepad scripts; opentonapi node fixes.</p>
                         </li>
                     </ul>
                 </section>
-                <section>
-                    <a class="header-link" href="#work-experience">
-                        <h2 id="work-experience">Work Experience | Project Based</h2>
-                    </a>
-                    <ul>
-                        <!-- <li>
-                            <h3>
-                                Feb 2022 -
-                                <span class="highlight">Present</span> |
-                                Independent Blockchain Developer
-                            </h3>
-                        </li> -->
+
+                <section id="opensource" class="scroll-mt-24">
+                    <h2 class="text-sm font-semibold uppercase tracking-wider text-neutral-400">Open Source (TON ecosystem)</h2>
+                    <p class="mt-4 text-neutral-600">Contributions to widely used TON libraries and tooling.</p>
+                    <ul class="mt-6 space-y-4 border-t border-neutral-200 pt-6">
                         <li>
-                            <h3>
-                                <a href="https://t.me/tg_dex_trade_bot">Solana Trading Bot</a>, Mini app
-                            </h3>
-                            <ul>
-                                <li>Developed an automated wallet system—generates, manages, and secures Solana wallets with encrypted private keys, deposit/withdrawal support, and transaction history</li>
-                                <li>Created a dynamic token marketplace with real-time metrics (liquidity, volume, market cap) and integration with Raydium for new token listings</li>
-                                <li>Implemented a trading interface with token analytics, audit info, TradingView charts, and one-click buy/sell functionality</li>
-                                <li>Designed a position-tracking system for monitoring open/closed trades with PnL calculations</li>
-                                <li>Developed a scalable microservice architecture with real-time token monitoring via WebSocket/GRPC, Solana blockchain data aggregation, and automated metric calculations</li>
-                                <li>Built a high-performance backend (Python + FastAPI) and Telegram bot (aiogram + webhooks) for fast, reliable user interactions</li>
-                                <li>Designed a responsive frontend (React) for smooth UI integration with Telegram WebApp and future platform expansion</li>
-                                <a href="https://github.com/taiakindaniil/sol-trading-bot-readme">More details...</a>
-                            </ul>
+                            <h3 class="font-semibold text-neutral-900"><a href="https://github.com/nessshon/tonutils" class="hover:underline">tonutils</a></h3>
+                            <p class="mt-1 text-sm text-neutral-600">Popular Python library for TON.</p>
                         </li>
                         <li>
-                            <h3>
-                                <a href="https://t.me/CashTonBot">"CashTON"</a>, Telegram bot
-                            </h3>
-                            <ul>
-                                <li>Built an own subscription system for Telegram channels</li>
-                                <li>Created a scalable database structure for managing users, coupons, and transactions</li>
-                                <li>Developed a scheduler system for automated tasks and notifications</li>
-                                <li>Built a comprehensive admin interface for managing bot operations</li>
-                                <li>Implemented secure payment processing and user verification systems</li>
-                                <li>Created a user-friendly interface with menu-based navigation</li>
-                                <li>Set up proper logging and error handling throughout the application</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="https://crypton.tools">"CRYPTON"</a>, cutting-edge utilities for TON blockchain
-                            </h3>
-                            <ul>
-                                <li>Developed a unique scalable <a href="https://staking.crypton.tools">staking contract</a> for $CRYPTON token</li>
-                                <li>Integrated early unstaking with penalties</li>
-                                <li>Added a limit of n stakes per user</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>
-                                "Diamore", TOKENIZED DIAMONDS MARKETPLACE
-                            </h3>
-                            <ul>
-                                <li>NFT collection was finalized and launched urgently (within a day)</li>
-                                <li>refund system for TON distribution for users who failed to mint NFTs due to the previous developer</li>
-                                <li>NFT staking smart contract</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>
-                                "DarkTonPad", a launchpad for startups with community-driven investments
-                            </h3>
-                            <ul>
-                                <li>TonConnect was integrated into the Telegram Web App</li>
-                                <li>microservice for accepting USDT payments for startups</li>
-                                <li>smart contract for mass airdrop distribution for a multi-million audience</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>
-                                "Underhood.io", NFT project
-                            </h3>
-                            <ul>
-                                <li>Developed jetton smart contract closely linked to NFT functionality</li>
-                                <li>Created smart contract for an NFT collection with token farming, NFT upgrades, and burning for full returns</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>
-                                One of the private clients
-                            </h3>
-                            <ul>
-                                <li>a node for trading on various DEXs in the Sui blockchain was created in a short timeframe (3-4 hours)</li>
-                                <li>GasPump, Stonfi v2, Blum Memepad scripts for tokens trading</li>
-                                <li>opentonapi node fixes</li>
-                            </ul>
+                            <h3 class="font-semibold text-neutral-900"><a href="https://github.com/ProgramCrafter/tvm-quirks" class="hover:underline">tvm-quirks</a></h3>
+                            <p class="mt-1 text-sm text-neutral-600">Low-level extensions for FunC / TOLK smart contracts.</p>
                         </li>
                     </ul>
+                </section>
+
+                <section id="channel" class="scroll-mt-24">
+                    <h2 class="text-sm font-semibold uppercase tracking-wider text-neutral-400">From my channel</h2>
+                    <p class="mt-4 text-neutral-600">Latest posts from <a href="https://t.me/dnevnik_ton" class="text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">@dnevnik_ton</a>.</p>
+                    <div class="mt-6 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50/50">
+                        <iframe
+                            src="https://t.me/s/dnevnik_ton?embed=1"
+                            class="h-[480px] w-full border-0"
+                            title="Telegram channel @dnevnik_ton"
+                            loading="lazy"
+                        ></iframe>
+                        <div class="border-t border-neutral-200 bg-white px-4 py-3 text-center">
+                            <a href="https://t.me/dnevnik_ton" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-600 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Open channel in Telegram →</a>
+                        </div>
+                    </div>
                 </section>
             </main>
-            <footer>
-                <p>Join my Telegram channel <a href="https://t.me/dnevnik_ton">@dnevnik_ton</a></p>
+
+            <footer class="mt-24 border-t border-neutral-200 pt-8 text-center text-sm text-neutral-500">
+                <p>Channel: <a href="https://t.me/dnevnik_ton" class="text-neutral-600 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">@dnevnik_ton</a></p>
             </footer>
         </div>
     </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+        lucide.createIcons();
+
+        (function () {
+            var menuToggle = document.getElementById('menu-toggle');
+            var menuClose = document.getElementById('menu-close');
+            var overlay = document.getElementById('nav-overlay');
+            var navLinks = overlay.querySelectorAll('.nav-link');
+
+            function openMenu() {
+                overlay.setAttribute('aria-hidden', 'false');
+                menuToggle.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+                overlay.classList.add('nav-overlay--open');
+            }
+
+            function closeMenu() {
+                overlay.classList.remove('nav-overlay--open');
+                overlay.setAttribute('aria-hidden', 'true');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                overlay.addEventListener('transitionend', function onEnd() {
+                    overlay.removeEventListener('transitionend', onEnd);
+                    document.body.style.overflow = '';
+                }, { once: true });
+            }
+
+            function toggleMenu() {
+                if (overlay.classList.contains('nav-overlay--open')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            }
+
+            menuToggle.addEventListener('click', toggleMenu);
+            menuClose.addEventListener('click', closeMenu);
+
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    var href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        var target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                        closeMenu();
+                    }
+                });
+            });
+
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) closeMenu();
+            });
+        })();
+    </script>
 </body>
 </html>
