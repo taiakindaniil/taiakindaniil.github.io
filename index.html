@@ -86,6 +86,7 @@
                 <a href="#about" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">About</a>
                 <a href="#skills" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Skills &amp; Interests</a>
                 <a href="#mini-apps" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Telegram Mini Apps</a>
+                <a href="#automations" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Automations</a>
                 <a href="#projects" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Other Projects</a>
                 <a href="#opensource" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Open Source</a>
             </nav>
@@ -230,6 +231,32 @@
                     </div>
                 </section>
 
+                <section id="automations" class="scroll-mt-24">
+                    <h2 class="text-sm font-semibold uppercase tracking-wider text-neutral-400">Automations</h2>
+                    <p class="mt-4 text-neutral-600">Development and implementation of business automation systems.</p>
+
+                    <article class="mt-8 rounded-xl border border-neutral-200 bg-neutral-50/50 p-6">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <h3 class="text-lg font-semibold text-neutral-900">Avto Intelligence</h3>
+                            <span class="rounded-full bg-neutral-200 px-2.5 py-0.5 text-xs font-medium text-neutral-700">Deployed at company</span>
+                        </div>
+                        <p class="mt-2 text-sm font-medium text-neutral-500">Auto business automation</p>
+                        <p class="mt-3 text-neutral-600 text-sm leading-relaxed">
+                            Designed and implemented an automated car sourcing system from China for Russian Transit.
+                        </p>
+                        <p class="mt-3 text-neutral-600 text-sm leading-relaxed">
+                            The system analyzes Che168, Dongchedi, and Guazi marketplaces, matches cars to client requests, and produces curated selections with photos, specifications, and turnkey cost estimates.
+                        </p>
+                        <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+                            <strong class="text-neutral-800">Result:</strong> reduced vehicle sourcing time from hours to minutes and automated manager workflows.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-3">
+                            <a href="https://avto-intelligence.github.io" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">About the project →</a>
+                            <a href="https://rustransit.pro" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Client →</a>
+                        </div>
+                    </article>
+                </section>
+
                 <section id="projects" class="scroll-mt-24">
                     <h2 class="text-sm font-semibold uppercase tracking-wider text-neutral-400">Other Projects</h2>
                     <p class="mt-4 text-neutral-600">Blockchain, smart contracts, bots, and one-off integrations.</p>
@@ -363,7 +390,7 @@
                 if (e.target === overlay) closeMenu();
             });
 
-            var revealTargets = document.querySelectorAll('#mini-apps article, #projects article, #projects li');
+            var revealTargets = document.querySelectorAll('#mini-apps article, #projects article, #projects li, #automations article');
             var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
             if (!prefersReducedMotion && 'IntersectionObserver' in window) {
