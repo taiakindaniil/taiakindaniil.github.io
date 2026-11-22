@@ -3,60 +3,64 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Daniel Taiakin | Software Engineer — Telegram Mini Apps, TON, Blockchain</title>
-    <meta name="description" content="Daniel Taiakin — Software Engineer. Telegram Mini Apps, bots, smart contracts (TON, Solana). React, Python, FastAPI, aiogram. Open to discuss your project." />
-    <meta name="keywords" content="Software Engineer, Telegram Mini Apps, Telegram Bot, TON, blockchain, Solana, React, Python, FastAPI, aiogram, smart contracts, full-stack developer" />
+    <title>Daniel Taiakin — Software Engineer &amp; Founder of RepplyAI and PewPee</title>
+    <meta name="description" content="Daniel Taiakin is a software engineer and founder of RepplyAI, an AI sales assistant, and PewPee, an iOS music app with over 600,000 downloads." />
     <meta name="author" content="Daniel Taiakin" />
     <link rel="canonical" href="https://taiakindaniil.github.io/" />
 
     <!-- Open Graph (Telegram, WhatsApp, etc.) -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Daniel Taiakin | Software Engineer" />
-    <meta property="og:description" content="Telegram Mini Apps, bots, smart contracts. React, Python, FastAPI. Discuss your project." />
+    <meta property="og:title" content="Daniel Taiakin — Software Engineer &amp; Founder of RepplyAI and PewPee" />
+    <meta property="og:description" content="Daniel Taiakin is a software engineer and founder of RepplyAI, an AI sales assistant, and PewPee, an iOS music app with over 600,000 downloads." />
     <meta property="og:url" content="https://taiakindaniil.github.io/" />
-    <meta property="og:image" content="https://taiakindaniil.github.io/media/gifts-constructor-mini-app.webp" />
-    <meta property="og:image:alt" content="Daniel Taiakin — Software Engineer. Telegram Mini Apps, TON, Blockchain." />
+    <meta property="og:image" content="https://taiakindaniil.github.io/media/daniel-taiakin.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="336" />
+    <meta property="og:image:height" content="420" />
+    <meta property="og:image:alt" content="Portrait of Daniel Taiakin" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Daniel Taiakin" />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Daniel Taiakin | Software Engineer" />
-    <meta name="twitter:description" content="Telegram Mini Apps, bots, smart contracts. React, Python, FastAPI. Discuss your project." />
-    <meta name="twitter:image" content="https://taiakindaniil.github.io/media/gifts-constructor-mini-app.webp" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Daniel Taiakin — Software Engineer &amp; Founder of RepplyAI and PewPee" />
+    <meta name="twitter:description" content="Daniel Taiakin is a software engineer and founder of RepplyAI, an AI sales assistant, and PewPee, an iOS music app with over 600,000 downloads." />
+    <meta name="twitter:image" content="https://taiakindaniil.github.io/media/daniel-taiakin.webp" />
+    <meta name="twitter:image:alt" content="Portrait of Daniel Taiakin" />
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Daniel Taiakin",
-      "jobTitle": "Software Engineer",
+      "@type": "ProfilePage",
       "url": "https://taiakindaniil.github.io/",
-      "sameAs": [
-        "https://t.me/taiakin",
-        "https://github.com/taiakindaniil",
-        "https://x.com/taiakindaniel"
-      ],
-      "knowsAbout": ["Telegram Mini Apps", "blockchain", "TON", "Solana", "React", "Python", "FastAPI", "aiogram", "smart contracts"],
-      "description": "Software Engineer. Telegram Mini Apps, bots, smart contracts. Open to discuss your project."
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://taiakindaniil.github.io/#daniel-taiakin",
+        "name": "Daniel Taiakin",
+        "jobTitle": "Software Engineer",
+        "url": "https://taiakindaniil.github.io/",
+        "image": "https://taiakindaniil.github.io/media/daniel-taiakin.webp",
+        "description": "Software engineer and founder of RepplyAI, an AI sales assistant, and PewPee, an iOS music app.",
+        "sameAs": [
+          "https://t.me/taiakin",
+          "https://github.com/taiakindaniil",
+          "https://x.com/taiakindaniel"
+        ],
+        "knowsAbout": ["iOS apps", "Telegram Mini Apps", "backend systems", "business automation", "smart contracts", "TON"],
+        "@reverse": {
+          "founder": [
+            { "@type": "Organization", "name": "RepplyAI", "url": "https://repplyai.com/" },
+            { "@type": "Organization", "name": "PewPee", "url": "https://pewpee.com/" }
+          ]
+        }
+      }
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                },
-            },
-        };
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tailwind.css" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="antialiased text-neutral-800 bg-white font-sans">
@@ -84,6 +88,7 @@
         <div class="nav-overlay__content flex h-full w-full flex-col items-center justify-center gap-1 p-8 opacity-0 transition-all duration-300 ease-out">
             <nav class="flex flex-col items-center gap-1" aria-label="Sections">
                 <a href="#about" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">About</a>
+                <a href="#selected-projects" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Selected Projects</a>
                 <a href="#skills" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Skills &amp; Interests</a>
                 <a href="#mini-apps" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Telegram Mini Apps</a>
                 <a href="#automations" class="nav-link rounded px-4 py-3 text-lg font-medium text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-900">Automations</a>
@@ -116,11 +121,12 @@
     <div class="min-h-screen">
         <div class="mx-auto max-w-2xl px-6 py-16 sm:px-8">
             <header class="text-center">
+                <img src="media/daniel-taiakin.webp" alt="Daniel Taiakin" width="112" height="112" class="mx-auto mb-5 h-28 w-28 rounded-full border border-neutral-200 object-cover object-[center_25%]" />
                 <h1 class="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">Daniel Taiakin</h1>
-                <p class="mt-2 text-lg text-neutral-600">Software Engineer</p>
+                <p class="mt-2 text-lg text-neutral-600">Software Engineer &amp; Product Builder</p>
                 <p class="mt-3 text-sm text-neutral-500">
                     Russia, GMT+3 ·
-                    <a href="https://t.me/taiakin" class="text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Telegram</a>
+                    <a href="https://t.me/taiakin" class="text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Message me on Telegram</a>
                     ·
                     <a href="https://github.com/taiakindaniil" class="text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">GitHub</a>
                     ·
@@ -132,9 +138,47 @@
                 <section id="about" class="scroll-mt-24">
                     <h2 class="text-sm font-semibold uppercase tracking-wider text-neutral-400">About</h2>
                     <p class="mt-4 text-neutral-600 leading-relaxed">
-                        Hello! My name is Daniel. I am a developer with a strong passion for open-source development and
-                        blockchain technology. I build Telegram Mini Apps, bots, and smart contracts.
+                        I’m Daniel, a software engineer who builds and ships products. I founded RepplyAI, where we help
+                        sales teams respond to and qualify inbound leads around the clock. I also founded PewPee, a music app for iPhone and iPad.
                     </p>
+                    <p class="mt-3 text-neutral-600 leading-relaxed">
+                        My work spans iOS apps, Telegram Mini Apps, backend systems, and business automation. I’ve also built
+                        smart contracts and contributed to open-source tooling in the TON ecosystem. I use Codex to build and
+                        iterate on projects faster. Outside of work, I enjoy karting and robotics.
+                    </p>
+                    <p class="mt-3 text-neutral-600 leading-relaxed">
+                        I write about what I’m building and what I learn along the way.
+                        <a href="https://t.me/dnevnik_ton" target="_blank" rel="noopener noreferrer" class="text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Read my Telegram channel ↗</a>
+                    </p>
+                </section>
+
+                <section id="selected-projects" class="scroll-mt-24">
+                    <h2 class="text-sm font-semibold uppercase tracking-wider text-neutral-400">Selected Projects</h2>
+                    <div class="mt-8 space-y-6">
+                        <article class="rounded-xl border border-neutral-200 bg-neutral-50/50 overflow-hidden">
+                            <img src="media/repplyai-cover.webp" alt="RepplyAI sales dashboard displayed on a laptop at a racetrack" width="1280" height="721" class="w-full h-auto" loading="lazy" />
+                            <div class="p-6">
+                                <h3 class="text-lg font-semibold text-neutral-900">RepplyAI</h3>
+                                <p class="mt-2 text-neutral-600 text-sm leading-relaxed">
+                                    I founded RepplyAI, an AI sales assistant that replies to customer inquiries, qualifies leads, and passes
+                                    the conversation to the sales team in their CRM. At Russian Transit, it handles inbound messages from Avito, Auto.ru,
+                                    Telegram, and the company website around the clock, creating leads in Bitrix24.
+                                </p>
+                                <a href="https://repplyai.com/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Visit website →</a>
+                            </div>
+                        </article>
+                        <article class="rounded-xl border border-neutral-200 bg-neutral-50/50 overflow-hidden">
+                            <img src="media/pewpee-cover.webp" alt="PewPee website and music player previews" width="1280" height="957" class="w-full h-auto" loading="lazy" />
+                            <div class="p-6">
+                                <h3 class="text-lg font-semibold text-neutral-900">PewPee</h3>
+                                <p class="mt-2 text-neutral-600 text-sm leading-relaxed">
+                                    I founded PewPee, a music app for iPhone and iPad. The app has surpassed 600,000 downloads
+                                    and has 13,000 monthly active users.
+                                </p>
+                                <a href="https://apps.apple.com/app/id1483338834" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">View on the App Store →</a>
+                            </div>
+                        </article>
+                    </div>
                 </section>
 
                 <section id="skills" class="scroll-mt-24">
@@ -154,7 +198,7 @@
                     </p>
                     <div class="mt-8 space-y-6">
                         <article class="rounded-xl border border-neutral-200 bg-neutral-50/50 overflow-hidden">
-                            <img src="media/biggame-mini-app.webp" alt="BigGame Club Mini App preview" class="w-full object-cover" />
+                            <img src="media/biggame-mini-app.webp" alt="BigGame Club Mini App preview" width="3942" height="2880" class="w-full h-auto object-cover" loading="lazy" />
                             <div class="p-6">
                             <h3 class="text-lg font-semibold text-neutral-900">BigGame Club</h3>
                             <p class="mt-2 text-neutral-600 text-sm leading-relaxed">
@@ -173,7 +217,7 @@
                             </div>
                         </article>
                         <article class="rounded-xl border border-neutral-200 bg-neutral-50/50 overflow-hidden">
-                            <img src="media/gifts-constructor-mini-app.webp" alt="Gifts Constructor Mini App preview" class="w-full object-cover" />
+                            <img src="media/gifts-constructor-mini-app.webp" alt="Gifts Constructor Mini App preview" width="2628" height="1920" class="w-full h-auto object-cover" loading="lazy" />
                             <div class="p-6">
                             <h3 class="text-lg font-semibold text-neutral-900">Gifts Constructor</h3>
                             <p class="mt-2 text-neutral-600 text-sm leading-relaxed">
@@ -190,7 +234,7 @@
                             </div>
                         </article>
                         <article class="rounded-xl border border-neutral-200 bg-neutral-50/50 overflow-hidden">
-                            <img src="media/solana-trading-bot.webp" alt="Solana Trading Bot preview" class="w-full object-cover" />
+                            <img src="media/solana-trading-bot.webp" alt="Solana Trading Bot preview" width="2628" height="1920" class="w-full h-auto object-cover" loading="lazy" />
                             <div class="p-6">
                             <h3 class="text-lg font-semibold text-neutral-900"><a href="https://t.me/tg_dex_trade_bot" class="hover:underline">Solana Trading Bot</a></h3>
                             <p class="mt-2 text-neutral-600 text-sm leading-relaxed">
@@ -263,25 +307,21 @@
 
                     <article class="mt-8 rounded-xl border border-neutral-200 bg-neutral-50/50 p-6">
                         <div class="flex flex-wrap items-center gap-2">
-                            <h3 class="text-lg font-semibold text-neutral-900"><a href="https://t.me/jettradebot" class="hover:underline">JetTrade</a></h3>
+                            <h3 class="text-lg font-semibold text-neutral-900">JetTrade</h3>
                             <span class="rounded-full bg-neutral-200 px-2.5 py-0.5 text-xs font-medium text-neutral-700">Own project</span>
+                            <span class="rounded-full bg-neutral-200 px-2.5 py-0.5 text-xs font-medium text-neutral-700">No longer operational</span>
                         </div>
                         <p class="mt-2 text-neutral-600 text-sm leading-relaxed">
-                            Trading bot on TON with fast access to swaps and continuous feature updates. Built for reliability and stability. Collaboration with STON.fi. Referral program: up to 50% of commission from every trade made by users who join via referral link.
+                            JetTrade was a TON trading bot built for fast, reliable swaps in collaboration with STON.fi.
+                            Its referral program shared up to 50% of the commission on trades made by users who joined through referral links.
                         </p>
                         <ul class="mt-3 list-inside list-disc space-y-1 text-sm text-neutral-600">
                             <li>Reliable and stable bot with fast access to trading</li>
-                            <li>Continuous feature updates and integrations</li>
+                            <li>Regular feature updates and integrations during operation</li>
                             <li>Referral program with up to 50% commission share</li>
                             <li>Documentation, community chat, and alerts channel</li>
                         </ul>
                         <p class="mt-3 text-xs text-neutral-500"><strong>Stack:</strong> aiogram, PostgreSQL, TON</p>
-                        <div class="mt-3 flex flex-wrap gap-3">
-                            <a href="https://t.me/jettradebot" class="text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Bot</a>
-                            <a href="https://jettrade.gitbook.io/docs" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Docs</a>
-                            <a href="https://t.me/jettrade_chat" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Community</a>
-                            <a href="https://t.me/jet_detector" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">Alerts</a>
-                        </div>
                     </article>
 
                     <ul class="mt-8 space-y-6 border-t border-neutral-200 pt-6">
@@ -317,20 +357,16 @@
                     <p class="mt-4 text-neutral-600">Contributions to widely used TON libraries and tooling.</p>
                     <ul class="mt-6 space-y-4 border-t border-neutral-200 pt-6">
                         <li>
-                            <h3 class="font-semibold text-neutral-900"><a href="https://github.com/nessshon/tonutils" class="hover:underline">tonutils</a></h3>
+                            <h3 class="font-semibold text-neutral-900"><a href="https://github.com/nessshon/tonutils" class="inline-flex items-center gap-1 hover:underline">tonutils <i data-lucide="chevron-right" class="h-4 w-4"></i></a></h3>
                             <p class="mt-1 text-sm text-neutral-600">Popular Python library for TON.</p>
                         </li>
                         <li>
-                            <h3 class="font-semibold text-neutral-900"><a href="https://github.com/ProgramCrafter/tvm-quirks" class="hover:underline">tvm-quirks</a></h3>
+                            <h3 class="font-semibold text-neutral-900"><a href="https://github.com/ProgramCrafter/tvm-quirks" class="inline-flex items-center gap-1 hover:underline">tvm-quirks <i data-lucide="chevron-right" class="h-4 w-4"></i></a></h3>
                             <p class="mt-1 text-sm text-neutral-600">Low-level extensions for FunC / TOLK smart contracts.</p>
                         </li>
                     </ul>
                 </section>
             </main>
-
-            <footer class="mt-24 border-t border-neutral-200 pt-8 text-center text-sm text-neutral-500">
-                <p>Channel: <a href="https://t.me/dnevnik_ton" class="text-neutral-600 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-500">@dnevnik_ton</a></p>
-            </footer>
         </div>
     </div>
 
@@ -390,7 +426,7 @@
                 if (e.target === overlay) closeMenu();
             });
 
-            var revealTargets = document.querySelectorAll('#mini-apps article, #projects article, #projects li, #automations article');
+            var revealTargets = document.querySelectorAll('#selected-projects article, #mini-apps article, #projects article, #projects li, #automations article');
             var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
             if (!prefersReducedMotion && 'IntersectionObserver' in window) {
